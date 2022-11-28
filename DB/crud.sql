@@ -11,3 +11,5 @@ ciudad varchar (45) not null,
 correo varchar (45) not null,
 primary key (`id`)
 );
+
+alter table usuario modify correo varchar(50) not null;

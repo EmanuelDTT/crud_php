@@ -1,8 +1,8 @@
 <?php
 
-$database="crud";
+$database='crud';
 $user='root';
-$password="";
+$password='Sena2022';
 
 try {
 
@@ -10,7 +10,7 @@ try {
 
 }catch(PDOEXception $e){
 
-    echo "Error: ".->getMessage();
+    echo "Error: ".$e->getMessage();
 
 }
 

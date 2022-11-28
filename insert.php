@@ -1,6 +1,6 @@
 <?php
 
-    include_once'conexion.php';
+    include_once 'conexion.php';
 
     if (isset($_POST['guardar'])) {
         $nombre=$_POST['nombre'];
@@ -11,7 +11,7 @@
 
             if (!empty($nombre) && !empty($apellido) && !empty($telefono) && !empty($correo) && !empty($ciudad)){
 
-                if (!filter_var($correo, FILTER_VALIDATE_EMAIL) {
+                if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
                     echo "<script> alert('Correo no valido') </script>";
                 }else{
 
@@ -25,6 +25,7 @@
                         ':correo'=>$ciudad
 
                      ));
+
                      header('Location: index.php');
 
                 }
@@ -37,3 +38,69 @@
     }
 
 ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+
+    <div class="contenedor">
+
+       
+        <form class="formulario" action="" method="post">
+        <h2>Envio de datos</h2>
+        <div class="contenedor-campos">
+
+            <div class="campos">
+
+                    <input type="text" name="nombre" placeholder="Nombre" class="inputtext" >
+                   
+            </div>
+
+            <div class="campos">
+
+                <input type="text" name="apellido" placeholder="Apellido" class="inputtext">
+
+            </div>
+
+            <div class="campos">
+
+                    <input type="text" name="telefono" placeholder="Telefono" class="inputtext" >
+                   
+
+            </div>
+
+            <div class="campos">
+            <input type="text" name="ciudad" placeholder="Ciudad" class="inputtext">
+            </div>
+
+            <div class="campos">
+                    <input type="text" name="correo" placeholder="Correo electronico" class="inputtext">
+
+            </div>
+
+        </div>
+
+            <div class="btn-">
+
+                <a href="index.php" class="btn-danger">Cancelar</a>
+                <input type="submit" value="Guardar" name="guardar" class="btn">
+
+            </div>
+        
+
+
+
+        </form>
+
+    </div>
+    
+</body>
+</html>
