@@ -22,7 +22,7 @@
                         ':apellido'=>$apellido,
                         ':telefonos'=>$telefono,
                         ':ciudad'=>$ciudad,
-                        ':correo'=>$ciudad
+                        ':correo'=>$correo
 
                      ));
 
@@ -55,34 +55,40 @@
 
        
         <form class="formulario" action="" method="post">
-        <h2>Envio de datos</h2>
+        <br>
+        <h3>Welcome!</h3>
+        <br>
+        
+        <h5>¡Ya puedes registrar a tus usuarios!</h5>
         <div class="contenedor-campos">
 
             <div class="campos">
-
-                    <input type="text" name="nombre" placeholder="Nombre" class="inputtext" >
+                    
+                    <input type="text" name="nombre" placeholder="Your name!" class="inputtext" >
                    
             </div>
 
             <div class="campos">
-
-                <input type="text" name="apellido" placeholder="Apellido" class="inputtext">
+            
+                <input type="text" name="apellido" placeholder="Your lats name!" class="inputtext">
 
             </div>
 
             <div class="campos">
-
-                    <input type="text" name="telefono" placeholder="Telefono" class="inputtext" >
+                
+                    <input type="text" name="telefono" placeholder="Number Phone" class="inputtext" >
                    
 
             </div>
 
             <div class="campos">
-            <input type="text" name="ciudad" placeholder="Ciudad" class="inputtext">
+            
+            <input type="text" name="ciudad" placeholder="Where are Your from?" class="inputtext">
             </div>
 
             <div class="campos">
-                    <input type="text" name="correo" placeholder="Correo electronico" class="inputtext">
+           
+                    <input type="text" name="correo" placeholder="Example@hotmail.com" class="inputtext">
 
             </div>
 
@@ -91,7 +97,7 @@
             <div class="btn-">
 
                 <a href="index.php" class="btn-danger">Cancelar</a>
-                <input type="submit" value="Guardar" name="guardar" class="btn">
+                <input type="submit" value="Guardar" name="guardar" class="btn-guardar">
 
             </div>
         

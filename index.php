@@ -34,41 +34,52 @@
 <body>
 
         <div class="container">
-            <h2>Busqueda de usuario</h2>
-            <div class="barra-buscar"> 
-                <form action="" class="formu" method="post">
-                    <input type="text" name="buscar" placeholder="buscar nombre o apellidos"
-                    value="<?php if(isset($buscar_text)) echo $buscar_text; ?>" class="input">
 
-                    <input type="submit" class="btn" name="btn_buscar" value="buscar">
-                    <a href="insert.php" class="btn-nuevo">Nuevo registro</a>
+
+        <div class="barra-buscar"> 
+                <form action="" class="formu" method="post">
+                    <input type="text" name="buscar" placeholder="Buscar nombre o apellidos" autocomplete="off"
+                    value="<?php if(isset($buscar_text)) echo $buscar_text; ?>" class="input" id="texto">
+
+                    <input type="submit" class="btn" name="btn_buscar" value="Buscar">
+                    <a href="insert.php" class="btn-nuevo">New</a>
 
                 </form>
-            </div>
+
+                <h3>Hello!</h3> <br><br>
+            <h5>En este Pequeño formulario web puedes encontrar multiples tareas <br>
+            Ingresa, actualiza, Elimina y busca a tus usuarios en tu base de datos</h5>
+
+        </div>
+            
+
+            
+
+            
 
       
 
         <table >
             <tr class="head">
-                <td>Id</td>
+                <td>ID</td>
                 <td>Nombre</td>
                 <td>Apellidos</td>
                 <td>Telefono</td>
                 <td>Ciudad</td>
                 <td>Correo</td>
-                <td colspan="2">Acciónes</td>
+                <td colspan="2"><center>Opciones</center></td>
             </tr>
 
             <?php foreach($resultado as $fila): ?>
                 <tr>
-                    <td> <?php echo $fila['id']; ?></td>
+                    <td><b> <?php echo $fila['id']; ?></b></td>
                     <td> <?php echo $fila['nombre'];  ?></td>
                     <td> <?php echo $fila['apellidos']; ?> </td>
                     <td> <?php echo $fila['telefono']; ?> </td>
                     <td> <?php echo $fila['ciudad']; ?> </td>
                     <td> <?php echo $fila['correo']; ?> </td>
-                    <td> <a href="update.php?id= <?php echo $fila['id']; ?>" class="btn-update"></a> Editar</td>
-                    <td> <a href="delete.php?id= <?php echo $fila['id']; ?>" class="btn-delete"></a> Eleminar</td>
+                    <td> <a href="update.php?id= <?php echo $fila['id']; ?>" class="btn-update">Editar</a></td>
+                    <td> <a href="delete.php?id= <?php echo $fila['id']; ?>" class="btn-delete">Eliminar</a></td>
                     
 
                 </tr>
