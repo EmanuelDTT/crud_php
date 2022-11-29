@@ -43,7 +43,7 @@
                     ':apellido'=>$apellido,
                     ':telefonos'=>$telefono,
                     ':ciudad'=>$ciudad,
-                    ':correo'=>$ciudad
+                    ':correo'=>$correo
 
                  ));
 
