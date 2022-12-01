@@ -80,7 +80,7 @@
                     <td> <?php echo $fila['ciudad']; ?> </td>
                     <td> <?php echo $fila['correo']; ?> </td>
                     <td> <a href="update.php?id= <?php echo $fila['id']; ?>" ><button class="btn-update"> <img src="Img/editar.png" alt=""></button></a></td>
-                    <td> <a href="delete.php?id= <?php echo $fila['id']; ?>" ><button class="btn-delete" href="tu_url.php" onclick="return confirm('¿Realmente desea eliminar?')"><i class="fas fa-trash mr-2"> <img src="Img/papelera.png" alt=""></button></a></td>
+                    <td> <a href="delete.php?id= <?php echo $fila['id']; ?>" ><button class="btn-delete"  onclick="return confirm('¿Realmente desea eliminar?')"><i class="fas fa-trash mr-2"> <img src="Img/papelera.png" alt=""></button></a></td>
                     
 
                 </tr>
