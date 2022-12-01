@@ -9,11 +9,11 @@
 body{
 
     background-color: #f5efec;
-    align-items: center;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 100vw;
-    height: 100vh;
+    height: auto;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size:medium;
     overflow-x: hidden;
@@ -21,7 +21,7 @@ body{
 }
 
 .container{
-    margin-top: 20%;
+    margin: 0;
     width: 80%;
     height: auto;
     background-color: white;
@@ -32,8 +32,8 @@ body{
 
 
 .barra-buscar{
-    
-    width: 100%;
+    margin-top: 5%;
+    width: 80%;
     height: 300px;
     padding: 20px;
     background-color: #180e6d;
@@ -44,6 +44,7 @@ body{
 .formu{
 
     background-color: transparent;
+    display: flex;
     height: 15%;
     width: 50%;
     padding: 0px 0px;
@@ -82,26 +83,26 @@ h3, h5{
 	font-family:Arial;
 	font-size:12px;
 	
-    padding: 7px;
-    width: 15%;
-    
+    padding: 0px;
+    width: 8%;
+    height: 100%;
+    clip-path: circle();
     margin: 0px 0px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #beccca;
   
 }  
 
+
 .btn:hover{
-
-    background-color: #0c0549;
+    filter: invert(1);
     color: #ffffff;
-    transition: background .5s;
+    
+    transform: rotate(45deg);
+    transition: filter .5s, transform .5s;
 }
 
-.btn:active{
-    position:relative;
-	top:1px;
-}
+
 
 .btn-nuevo{
 
@@ -115,11 +116,12 @@ h3, h5{
 	font-size:12px;
     text-align: center;
     height: 100%;
-    width: 15%;
-    padding: 8px 10px;
+    width: 8%;
+    clip-path: circle();
+    padding: 10px 0px;
     text-decoration: none;
     color: #000000;
-    margin: 0px 0px;
+    margin: 0px 10px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #beccca;
 
@@ -131,6 +133,8 @@ table{
     width: 80%;
     margin-top: 50px;
     margin-bottom: 10px;
+
+    
 }
 
 table .head td{
@@ -144,9 +148,9 @@ table .head td{
 
 
 table tr td{
-    
+
     color: #000000;
-    padding: 7px;
+    padding: 10px;
     font-size: 14px;
     font-weight: 400;
     text-transform: capitalize;
@@ -154,27 +158,44 @@ table tr td{
 }
 
 
-
 .btn-update{
+    background-color: #ffffff;
     display: inline-block;
     font-size: 12px;
-    background: #3db33d;
+    border-style: none;
     color: #ffffff;
     text-decoration: none;
-    border-radius: 100px;
-    padding: 5px 10px;
+   
+    width: 50px;
+    height: 50px;
 }
+
+
+
 
 .btn-delete{
-    display: inline-block;
+    
     font-size: 12px;
-    background: rgb(248, 33, 33);
+    border-style: none;
+    background-color: #ffffff;
     color: #ffffff;
     text-decoration: none;
-    border-radius: 100px;
-    padding: 5px 10px;
+    border-radius: 0px;
+    width: 50px;
+    height: 50px;
+
 }
 
+img{
+    width: 70%;
+}
+
+
+
+.btn-delete:hover, .btn-update:hover{
+    transform: rotate(4deg);
+    cursor: pointer;
+}
 
 
 .contenedor{
@@ -288,3 +309,5 @@ input:focus{
     background-color: rgb(247, 168, 21);
     transform: translateY(-3px);
 }
+
+

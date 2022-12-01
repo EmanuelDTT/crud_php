@@ -33,7 +33,7 @@
 </head>
 <body>
 
-        <div class="container">
+        
 
 
         <div class="barra-buscar"> 
@@ -41,7 +41,9 @@
                     <input type="text" name="buscar" placeholder="Buscar nombre o apellidos" autocomplete="off"
                     value="<?php if(isset($buscar_text)) echo $buscar_text; ?>" class="input" id="texto">
 
-                    <input type="submit" class="btn" name="btn_buscar" value="Buscar">
+                    <button id="button" class="btn" name="btn_buscar"><img src="Img/lupa.png" alt="" id="lupa"></button>
+                    
+
                     <a href="insert.php" class="btn-nuevo">New</a>
 
                 </form>
@@ -53,13 +55,12 @@
         </div>
             
 
-            
-
+        <div class="container">
             
 
       
 
-        <table >
+        <table border="0">
             <tr class="head">
                 <td>ID</td>
                 <td>Nombre</td>
@@ -78,8 +79,8 @@
                     <td> <?php echo $fila['telefono']; ?> </td>
                     <td> <?php echo $fila['ciudad']; ?> </td>
                     <td> <?php echo $fila['correo']; ?> </td>
-                    <td> <a href="update.php?id= <?php echo $fila['id']; ?>" class="btn-update">Editar</a></td>
-                    <td> <a href="delete.php?id= <?php echo $fila['id']; ?>" class="btn-delete">Eliminar</a></td>
+                    <td> <a href="update.php?id= <?php echo $fila['id']; ?>" ><button class="btn-update"> <img src="Img/editar.png" alt=""></button></a></td>
+                    <td> <a href="delete.php?id= <?php echo $fila['id']; ?>" ><button class="btn-delete" href="tu_url.php" onclick="return confirm('¿Realmente desea eliminar?')"><i class="fas fa-trash mr-2"> <img src="Img/papelera.png" alt=""></button></a></td>
                     
 
                 </tr>
